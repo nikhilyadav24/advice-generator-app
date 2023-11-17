@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+:root{
+    --p-light-cyan: hsl(193, 38%, 86%);
+    --p-neon-green: hsl(150, 100%, 66%);
+
+    --n-grayish-blue: hsl(217, 19%, 38%);
+    --n-dark-grayish-blue: hsl(217, 19%, 24%);
+    --n-dark-blue: hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+}
+body {
+  background: var(--n-dark-blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-inline: 2rem;
+}
+
+.container {
+  font-family: "Manrope", sans-serif;
+  /* Fonts below will inherit this font family */
+  width: 100%;
+  max-width: 45rem;
+  display: grid;
+  grid: max-content 3.2rem / 1fr;
+  margin-top:15vh ;
+}
+
+.inner-container {
+  background: var(--n-dark-grayish-blue);
+  padding: 3.2rem 2.4rem 3.2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 545px) {
+    .inner-container {
+    padding: 3.4rem 3.4rem 4.6rem;
+  }
+}
+
+.advice-number {
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: var(--p-neon-green);
+}
+
+@media screen and (min-width: 545px) {
+  .advice-number {
+    letter-spacing: 0.3rem;
+    font-size: .9rem;
+    line-height: 1.2rem;
+  }
+}
+
+.advice-quote {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 3.3rem;
+  letter-spacing: 0.02rem;
+  color: var(--p-light-cyan);
+}
+
+@media screen and (min-width: 545px) {
+  .advice-quote {
+    margin-bottom: 1.6rem;
+    font-size: 28px;
+    line-height: 3.0rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.divider {
+  display: flex;
+  width: 100%;
+}
+
+picture > img {
+  margin: auto;
+  width: 100%;
+}
+
+.dice {
+  width: 5.4rem;
+  height: 5.4rem;
+  background: var(--p-neon-green);
+  border-radius: 50%;
+  place-self: end center;
+  transition: box-shadow 250ms;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border: none;
+}
+
+.dice:is(:hover) {
+  box-shadow: 0px 0px 20px var(--p-neon-green);
+}
